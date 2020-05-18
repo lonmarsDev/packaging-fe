@@ -63,7 +63,7 @@ export default {
         dateFormat: "MM/DD/YYYY",
         requestFunction: function(data) {
           return this.axios
-            .get("http://localhost:8080/orders", {
+            .get(process.env.apiURL, {
               params: data
             })
             .catch(
